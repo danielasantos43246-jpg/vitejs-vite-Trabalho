@@ -1,11 +1,10 @@
-function Navbar(props){
+function Navbar() {
   return (
-    <>
-      <nav className="navbar">
-        <span className="navbar-logo">Minha loja</span>
-        <span onClick={() => {props.openCart(true)}} className="navbar-cart"> Carrinho ({props.cartCount})</span>
-        </nav>
-      </>
-    )
-  }
+    <nav className="navbar">
+      <span className="navbar-logo">🛍️ MinhaLoja</span>
+      <span className="navbar-cart">🛒 Carrinho (0)</span>
+    </nav>
+  );
+}
+
 export default Navbar;
