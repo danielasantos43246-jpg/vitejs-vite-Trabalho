@@ -44,15 +44,15 @@ const products = [
 ];
 
 function App() {
-  const [cartCount,setCartCount]= useState(0)
-  
-  function andleAddToCart () {
-    setCartCount (cartCount +1)
+  const [cartCount,setCartCount]= useState([])
+
+  function handleAddToCart (product) {
+    setCartItems ([...cartItems, product])
   }
 
   return (
     <div>
-      <Navbar cartCount={cartCount}/>
+      <Navbar cartCount={cartCountms.length}/>
       <main className="main-content">
         <h2 className="section-title">Nossos Produtos</h2>
         <ProductList products={products} onAddToCart={handleAddToCart} />
