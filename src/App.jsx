@@ -45,13 +45,17 @@ const products = [
 
 function App() {
   const [cartCount,setCartCount]= useState(0)
+  
+  function andleAddToCart () {
+    setCartCount (cartCount +1)
+  }
 
   return (
     <div>
       <Navbar cartCount={cartCount}/>
       <main className="main-content">
         <h2 className="section-title">Nossos Produtos</h2>
-        <ProductList products={products} />
+        <ProductList products={products} onAddToCart={handleAddToCart} />
       </main>
     </div>
   );

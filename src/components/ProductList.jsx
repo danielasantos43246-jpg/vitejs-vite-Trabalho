@@ -1,5 +1,6 @@
 import ProductCard from "./ProductCard";
-function ProductList({products}) {
+
+function ProductList({products, onAddToCart}) {
     return (
         <div className="Product-grid">
             {products.map((product) =>(
@@ -8,6 +9,7 @@ function ProductList({products}) {
                 name={product.name}
                 price={product.price}
                 image={product.image}
+                onAddToCart={onAddToCart}
                 />
             ))}
         </div>
