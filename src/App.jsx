@@ -1,3 +1,4 @@
+import {useState} from 'react';
 import Navbar from "./components/Navbar";
 import ProductList from "./components/ProductList";
 
@@ -43,9 +44,11 @@ const products = [
 ];
 
 function App() {
+  const [cartCount,setCartCount]= useState(0)
+
   return (
     <div>
-      <Navbar />
+      <Navbar cartCount={cartCount}/>
       <main className="main-content">
         <h2 className="section-title">Nossos Produtos</h2>
         <ProductList products={products} />
