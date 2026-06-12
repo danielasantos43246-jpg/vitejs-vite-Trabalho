@@ -1,8 +1,15 @@
-function Navbar({ cartCount }) {
+function Navbar({ cartCount, onCartClick }) {
   return (
     <nav className="navbar">
-      <span className="navbar-logo">🛍️ MinhaLoja</span>
-      <span className="navbar-cart">🛒 Carrinho ({cartCount})</span>
+      <span className="navbar-logo">
+        <span className="logo-barba">BARBA</span>
+        <span className="logo-elegante">ELEGANTE</span>
+      </span>
+
+      <span className="navbar-cart" onClick={onCartClick}>
+  <span className="cart-icon"></span>
+  Carrinho ({cartCount})
+</span>
     </nav>
   );
 }

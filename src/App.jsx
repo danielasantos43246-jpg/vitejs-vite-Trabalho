@@ -15,11 +15,11 @@ const products = [
 ]
 
 function App() {
-  const [cartItems,setCartItem]= useState([])
-  const [iscartIpen,setCartOpen]= useState(false)
+  const [cartItems, setCartItems]   = useState([])
+  const [isCartOpen, setIsCartOpen] = useState(false)
 
-  function handleAddToCart (product) {
-    setCartItems ([...cartItems, product])
+  function handleAddToCart(product) {
+    setCartItems([...cartItems, product])
   }
 
   function handleRemoveFromCart(index) {
@@ -36,27 +36,28 @@ function App() {
 
   return (
     <div>
-      <Navbar 
-      
-      cartCount={cartCountms.length}
-      onCartClick={handleOpenCart}
+      <Navbar
+        cartCount={cartItems.length}
+        onCartClick={handleOpenCart}
       />
 
       <main className="main-content">
         <h2 className="section-title">Nossos Produtos</h2>
         <ProductList
-         products={products} 
-         onAddToCart={handleAddToCart} />
+          products={products}
+          onAddToCart={handleAddToCart}
+        />
       </main>
-      {setIsCartOpen && (
+
+      {isCartOpen && (
         <CartSidebar
-        cartItems={cartItems}
-        onRemove={handleRemoveFromCart}
-        onclose={handleCloseCart}
+          cartItems={cartItems}
+          onRemove={handleRemoveFromCart}
+          onClose={handleCloseCart}
         />
       )}
     </div>
   )
 }
 
-export default App;
+export default App
