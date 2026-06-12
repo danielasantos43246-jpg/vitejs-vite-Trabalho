@@ -42,7 +42,7 @@ function App() {
       />
 
       <main className="main-content">
-        <h2 className="section-title">Nossos Produtos</h2>
+      <h2 className="section-title">Coleção Barba Elegante</h2>
         <ProductList
           products={products}
           onAddToCart={handleAddToCart}
