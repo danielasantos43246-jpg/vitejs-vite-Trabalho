@@ -8,7 +8,7 @@ function CartSidebar({ cartItems, onRemove, onClose }) {
       <div className="cart-overlay">
         <div className="cart-sidebar">
           <div className="cart-header">
-            <h2>Seu Carrinho</h2>
+            <h2>Seu carrinho</h2>
             <button className="cart-close" onClick={onClose}>✕</button>
           </div>
   
