@@ -25,7 +25,7 @@ function CartSidebar({ cartItems, onRemove, onClose }) {
                       className="cart-item-remove"
                       onClick={() => onRemove(index)}
                     >
-                      🗑
+                     🗑︎
                     </button>
                   </li>
                 ))}
